@@ -46,6 +46,8 @@ public class NeuePerson extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
+        SimpleDialog.setMinimumSize(new java.awt.Dimension(400, 300));
+
         OK.setText("OK");
         OK.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -190,7 +192,7 @@ public class NeuePerson extends javax.swing.JFrame {
     }//GEN-LAST:event_DatumtxtActionPerformed
 
     private void OKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OKActionPerformed
-        SimpleDialog.setVisible(true);
+        SimpleDialog.setVisible(false);
     }//GEN-LAST:event_OKActionPerformed
 
     /**

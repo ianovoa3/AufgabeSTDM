@@ -43,14 +43,16 @@ public class Backend {
     
     public ArrayList<PersonVO> readTable() throws SQLException  {
         
-        PersonVO person = new PersonVO();
+        PersonVO person; 
         DBKlasse Database = new DBKlasse();
         ArrayList<PersonVO> liste = new ArrayList();
+     
         try{
            cnn    =  Database.DBKlasse();
            Befehl = cnn.createStatement();
            result = Befehl.executeQuery("SELECT * FROM kunde");
            while(result.next()){
+               person = new PersonVO();
                Vorname        = result.getString("Vorname");
                Nachname       = result.getString("Nachname");
                Geburtsdatum   = result.getString("Geburtsdatum");
@@ -58,7 +60,7 @@ public class Backend {
                person.setNachname(Nachname);
                person.setDatum(Geburtsdatum);
                liste.add(person);
-               
+              
            }
         
         }catch(Exception e){
@@ -78,13 +80,13 @@ public class Backend {
         try{
             person.setVorname(Vorname);
             person.setNachname(Nachname);
-            person.setDatum(Nachname);
+            person.setDatum(Geburtsdatum);
             
             cnn       = Database.DBKlasse();
             BefehlVor = cnn.prepareStatement("INSERT INTO Kunde(Vorname,Nachname,Geburtsdatum) VALUES(?,?,?)");
             BefehlVor.setString(1, person.getVorname());
             BefehlVor.setString(2, person.getNachname());
-            BefehlVor.setString(1, person.getDatum());
+            BefehlVor.setString(3, person.getDatum());
             BefehlVor.executeUpdate();
             transaction = true;
         

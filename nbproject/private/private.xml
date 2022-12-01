@@ -4,7 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/novoa/Documents/NetBeansProjects/STDMDB/src/Datenbank/DBKlasse.java</file>
+            <file>file:/C:/Users/novoa/Documents/NetBeansProjects/STDMDB/src/VIEW/NeuePerson.java</file>
+            <file>file:/C:/Users/novoa/Documents/NetBeansProjects/STDMDB/src/VO/PersonVO.java</file>
             <file>file:/C:/Users/novoa/Documents/NetBeansProjects/STDMDB/src/VIEW/Tabelle.java</file>
+            <file>file:/C:/Users/novoa/Documents/NetBeansProjects/STDMDB/src/VIEW/Anmeldung.java</file>
             <file>file:/C:/Users/novoa/Documents/NetBeansProjects/STDMDB/src/DAO/Backend.java</file>
         </group>
     </open-files>

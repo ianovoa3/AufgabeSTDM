@@ -204,19 +204,23 @@ public class Tabelle extends javax.swing.JFrame {
         ArrayList<PersonVO> Liste = new ArrayList();
         Backend logik = new Backend();
         Liste = logik.readTable();   
-        DefaultTableModel model = new DefaultTableModel();
-        jTable1.setModel(model);
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        //jTable1.setModel(model);
         
         for(int i=0;i<Liste.size();i++){
             
+            if(Liste.get(i).toString().isEmpty()){
+                break;
+            }
             String vorname  = Liste.get(i).getVorname();
             String Nachname = Liste.get(i).getNachname();
             String Datum    = Liste.get(i).getDatum();
             
             Object[]  dataTable = {vorname,Nachname,Datum};
-            model.addRow(dataTable);
-        }     
-        
+            model.insertRow(i, dataTable);
+            
+           
+        }
         
     }
 }
